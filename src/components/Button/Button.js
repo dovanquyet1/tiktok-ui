@@ -17,9 +17,9 @@ function Button({
     large = false,
     children,
     className,
-    onClick,
     leftIcon,
     rightIcon,
+    onClick,
     ...passProps
 }) {
     let Comp = 'button';
@@ -50,11 +50,12 @@ function Button({
         primary,
         outline,
         text,
-        rounded,
         disabled,
+        rounded,
         small,
         large,
     });
+
     return (
         <Comp className={classes} {...props}>
             {leftIcon && <span className={cx('icon')}>{leftIcon}</span>}
@@ -63,10 +64,6 @@ function Button({
         </Comp>
     );
 }
-
-Button.propTypes = {
-    children: PropTypes.node,
-};
 
 Button.propTypes = {
     to: PropTypes.string,
@@ -80,9 +77,9 @@ Button.propTypes = {
     large: PropTypes.bool,
     children: PropTypes.node.isRequired,
     className: PropTypes.string,
-    onClick: PropTypes.node,
     leftIcon: PropTypes.node,
-    rightIcon: PropTypes.func,
-}
+    rightIcon: PropTypes.node,
+    onClick: PropTypes.func,
+};
 
 export default Button;
